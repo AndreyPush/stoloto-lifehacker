@@ -1,0 +1,37 @@
+.preview {
+  background: url("./assets/img/preview-bg.jpg") no-repeat top center/cover;
+
+  &_layer {
+    padding: 210px 0 122px;
+    background: url("./assets/img/preview-bitmap.png") no-repeat center center/auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 640px;
+
+    @include m(1023) {
+      padding: 126px 0 73px;
+      height: 384px;
+    }
+    @include m(479) {
+      padding: 90px 0 40px;
+      height: 200px;
+    }
+  }
+  &_pic {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 490px;
+
+    @include m(1169){
+      max-width: 390px;
+    }
+    @include m(1023) {
+      max-width: 290px;
+    }
+    @include m(479) {
+      max-width: 122px;
+    }
+  }
+}

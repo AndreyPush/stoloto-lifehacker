@@ -1,0 +1,235 @@
+.article {
+  margin-top: 200px;
+
+  @include m(1169) {
+    margin-top: 100px;
+  }
+  @include m(767) {
+    margin-top: 64px;
+  }
+  .wrapper {
+    & > img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-top: 45px;
+    }
+  }
+  p {
+    display: block;
+    margin-top: 40px;
+    color: #424242;
+    font: 18px/1.44 rr;
+
+    @include m(767) {
+      margin-top: 25px;
+    }
+    b {
+      color: #040404;
+    }
+  }
+  h2 {
+    display: block;
+    color: #000;
+    font: 48px/56px rb;
+
+    @include m(767) {
+      font-size: 27px;
+      line-height: 35px;
+    }
+  }
+  h3 {
+    display: block;
+    margin-top: 35px;
+    color: #040404;
+    font: 30px/35px rb;
+
+    @include m(767) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  a {
+    display: inline-block;
+    font-family: inherit;
+    font-size: inherit;
+    color: #3670F9;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  blockquote {
+    display: block;
+    margin-top: 45px;
+
+    span {
+      padding-left: 20px;
+      border-left: 3px solid #ED5E42;
+      display: block;
+      color: #000;
+      font: 18px/1.44 rb;
+    }
+    footer {
+      display: block;
+      margin-top: 13px;
+      padding-left: 23px;
+      color: #000;
+      font: 18px/1.44 rr;
+    }
+    cite {
+      display: block;
+      position: relative;
+      padding: 25px 0;
+      color: #000;
+      font: 18px/1.44 rb;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 3px;
+        width: 51px;
+        background-color: #ED5E42;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 51px;
+        background-color: #ED5E42;
+      }
+    }
+  }
+  .lead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    width: 100%;
+    height: 50px;
+    background-color: #ED5E42;
+    color: #fff;
+    font: 24px/28px rb;
+    text-decoration: none;
+    transition: $trs;
+
+    @include m(767) {
+      font-size: 18px;
+      line-height: 21px;
+    }
+    &:hover {
+      background-color: darken(#ED5E42, 10%);
+    }
+  }
+  ul {
+    display: block;
+    margin-bottom: 70px;
+
+    li {
+      margin-top: 27px;
+      display: flex;
+      align-items: center;
+
+      @include m(767) {
+        align-items: flex-start;
+        margin-top: 20px;
+      }
+      img {
+        display: block;
+        width: 60px;
+        height: auto;
+        flex-shrink: 0;
+
+        @include m(767) {
+          width: 36px;
+        }
+      }
+      .content {
+        display: block;
+        flex: 1;
+        margin-left: 40px;
+
+        @include m(767) {
+          margin-left: 13px;
+        }
+        h5 {
+          display: block;
+          color: #000;
+          font: 18px/1.44 rb;
+        }
+        span {
+          display: block;
+          color: #000;
+          font: 18px/1.44 rr;
+        }
+      }
+    }
+  }
+  ol {
+    display: block;
+    margin-bottom: 70px;
+
+    li {
+      margin-top: 27px;
+      display: flex;
+      align-items: center;
+
+      @include m(767) {
+        align-items: flex-start;
+        margin-top: 20px;
+      }
+      .num {
+        width: 60px;
+        height: 60px;
+        position: relative;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #ed5e42;
+        color: #ed5e42;
+        font: 36px/42px rb;
+
+        @include m(767) {
+          width: 36px;
+          height: 36px;
+          font: 20px/23px rb;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          border-radius: 50%;
+          left: 2px;
+          top: 2px;
+          right: 2px;
+          bottom: 2px;
+          border: 1px solid #ed5e42;
+        }
+      }
+      .content {
+        display: block;
+        flex: 1;
+        margin-left: 40px;
+
+        @include m(767) {
+          margin-left: 13px;
+        }
+        h5 {
+          display: block;
+          color: #000;
+          font: 18px/1.44 rb;
+        }
+        span {
+          display: block;
+          color: #000;
+          font: 18px/1.44 rr;
+        }
+      }
+    }
+  }
+}
